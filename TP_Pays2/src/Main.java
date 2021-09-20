@@ -13,7 +13,7 @@ public class Main {
 		
 		clavier = new Scanner(System.in);
 		
-		 Continent unContinent = null;
+		 Continent unContinent = new Continent("Europe");
 		 Pays desPays = null;
 		int choix;
 		 
@@ -88,19 +88,14 @@ public class Main {
 		}
 	}
 	public static void ajoutVille(Continent unContinent, Pays desPays) {
-		if(desPays == null) {
-			System.out.println("Veuillez d'abord ajouter un pays.");
-		}
-		else {
-			System.out.println("Notez le nom de la ville : ");
-			String vil = clavier.nextLine();
-			System.out.println("Entrez le nombre d'habitants : ");
-			int nbHab = clavier.nextInt();
-			System.out.println("Entrez la superficie : ");
-			float sup = clavier.nextInt();
-			Ville ville1 = new Ville (vil, nbHab, sup);
-			desPays.ajouterUneVille(ville1);
-		}
+		System.out.println("Notez le nom de la ville : ");
+		String vil = clavier.nextLine();
+		System.out.println("Entrez le nombre d'habitants : ");
+		int nbHab = clavier.nextInt();
+		System.out.println("Entrez la superficie : ");
+		float sup = clavier.nextInt();
+		Ville ville1 = new Ville (vil, nbHab, sup);
+		desPays.ajouterUneVille(ville1);
 	}
 	public static void affichageContinent(Continent unContinent) {
 		System.out.println(unContinent.toString());

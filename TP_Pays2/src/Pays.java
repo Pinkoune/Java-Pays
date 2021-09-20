@@ -97,8 +97,8 @@ public class Pays {
 	 */
 	public String rechercherUneVille(String unNom) {
 		int index = 0;
-		String result = "\nCette ville n'est pas pr�sente.";
-		while(index < this.lesVilles.size() && !this.lesVilles.get(index).getNom().equals(unNom)) {
+		String result = "\nCette ville n'est pas presente.";
+		while( index < lesVilles.size() && !unNom.equals(this.lesVilles.get(index).getNom())) {
 			index = index + 1;
 		}
 		if (index < this.lesVilles.size()) {
